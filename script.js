@@ -11,7 +11,7 @@
     MySQL: 'mysql', Microservices: 'microservices', Razor: 'razor', MVC: 'mvc',
     Vite: 'vite', Pinia: 'pinia', 'Vue Router': 'router', JWT: 'jwt', AWS: 'aws',
     'ASP.NET Core / MVC': 'dotnet', 'REST APIs': 'api', Authentication: 'authentication', RBAC: 'rbac',
-    PostgreSQL: 'postgresql', TimescaleDB: 'timescaledb', Redis: 'redis', xUnit: 'xunit', NUnit: 'nunit',
+    PostgreSQL: 'postgresql', TimescaleDB: 'timescaledb', Redis: 'redis', SQL: 'sql', xUnit: 'xunit', NUnit: 'nunit',
     'Integration testing': 'integration-testing', 'Unit / integration testing': 'integration-testing', Git: 'git', 'GitLab CI/CD': 'gitlab',
     Azure: 'azure', Postman: 'postman', Swagger: 'swagger', 'Swagger / OpenAPI': 'swagger', JavaScript: 'javascript'
   };

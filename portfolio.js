@@ -17,7 +17,7 @@ window.PORTFOLIO = {
   skills: ["C#", ".NET", "ASP.NET Core", "Entity Framework Core", "PostgreSQL", "Docker", "Vue 3"],
   skillGroups: [
     { title: "Backend Development", items: ["C#", ".NET", "ASP.NET Core / MVC", "Entity Framework / EF Core", "REST APIs", "Authentication", "RBAC"] },
-    { title: "Databases & Caching", items: ["PostgreSQL", "TimescaleDB", "MySQL", "Redis", "SQL query optimization"] },
+    { title: "Databases & Caching", items: ["PostgreSQL", "TimescaleDB", "MySQL", "Redis", "SQL"] },
     { title: "Testing & Quality", items: ["xUnit", "NUnit", "Unit / integration testing"] },
     { title: "Tools & DevOps", items: ["Git", "GitLab CI/CD", "Docker", "Postman", "Swagger / OpenAPI"] },
     { title: "Frontend Technologies", items: ["JavaScript", "TypeScript", "Vue 3", "Nuxt"] }
