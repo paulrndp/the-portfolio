@@ -44,7 +44,18 @@
     article.append(text('p', job.dates, 'experience-dates'), text('h3', job.company), text('p', job.role, 'experience-role'));
     if (job.location || job.mode) article.append(text('p', [job.location, job.mode].filter(Boolean).join(' · '), 'experience-meta'));
     if (job.highlights) {
-      const list = document.createElement('ul'); job.highlights.forEach(item => list.append(text('li', item))); article.append(list);
+      const list = document.createElement('ul');
+      job.highlights.forEach(item => {
+        if (typeof item === 'string') { list.append(text('li', item)); return; }
+        const entry = document.createElement('li'); entry.append(document.createTextNode(item.before || ''));
+        const url = safeUrl(item.url);
+        if (url && item.linkText) {
+          const link = text('a', item.linkText); link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer';
+          link.setAttribute('aria-label', `${item.linkText} website (opens in a new tab)`); entry.append(link);
+        } else if (item.linkText) entry.append(document.createTextNode(item.linkText));
+        entry.append(document.createTextNode(item.after || '')); list.append(entry);
+      });
+      article.append(list);
     } else article.append(text('p', job.description, 'experience-description'));
     $(target).append(article);
   }
