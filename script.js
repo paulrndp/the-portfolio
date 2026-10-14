@@ -7,7 +7,7 @@
   const stackIcons = {
     'Vue.js': 'vue', 'Vue 3': 'vue', TypeScript: 'typescript', Nuxt: 'nuxt',
     '.NET': 'dotnet', '.NET 10': 'dotnet', 'ASP.NET Core': 'dotnet', Docker: 'docker',
-    'C#': 'csharp', 'Entity Framework': 'entity-framework', 'Entity Framework Core': 'entity-framework', 'Entity Framework / EF Core': 'entity-framework',
+    'C#': 'csharp', Python: 'python', 'Entity Framework': 'entity-framework', 'Entity Framework Core': 'entity-framework', 'Entity Framework / EF Core': 'entity-framework',
     MySQL: 'mysql', Microservices: 'microservices', Razor: 'razor', MVC: 'mvc',
     Vite: 'vite', Pinia: 'pinia', 'Vue Router': 'router', JWT: 'jwt', AWS: 'aws',
     'ASP.NET Core / MVC': 'dotnet', 'REST APIs': 'api', Authentication: 'authentication', RBAC: 'rbac',

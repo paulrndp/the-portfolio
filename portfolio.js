@@ -14,9 +14,9 @@ window.PORTFOLIO = {
   github: "https://github.com/paulrndp",
   linkedin: "https://linkedin.com/in/paul-john-jimenez-064692124/",
   portfolio: "https://paulrndp.github.io/the-portfolio/",
-  skills: ["C#", ".NET", "ASP.NET Core", "Entity Framework Core", "PostgreSQL", "Docker", "Vue 3"],
+  skills: ["C#", "Python", ".NET", "ASP.NET Core", "Entity Framework Core", "PostgreSQL", "Docker", "Vue 3"],
   skillGroups: [
-    { title: "Backend Development", items: ["C#", ".NET", "ASP.NET Core / MVC", "Entity Framework / EF Core", "REST APIs", "Authentication", "RBAC"] },
+    { title: "Backend Development", items: ["C#", "Python", ".NET", "ASP.NET Core / MVC", "Entity Framework / EF Core", "REST APIs", "Authentication", "RBAC"] },
     { title: "Databases & Caching", items: ["PostgreSQL", "TimescaleDB", "MySQL", "Redis", "SQL"] },
     { title: "Testing & Quality", items: ["xUnit", "NUnit", "Unit / integration testing"] },
     { title: "Tools & DevOps", items: ["Git", "GitLab CI/CD", "Docker", "Postman", "Swagger / OpenAPI"] },
