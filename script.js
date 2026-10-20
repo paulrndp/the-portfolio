@@ -13,7 +13,8 @@
     'ASP.NET Core / MVC': 'dotnet', 'REST APIs': 'api', Authentication: 'authentication', RBAC: 'rbac',
     PostgreSQL: 'postgresql', TimescaleDB: 'timescaledb', Redis: 'redis', SQL: 'sql', xUnit: 'xunit', NUnit: 'nunit',
     'Integration testing': 'integration-testing', 'Unit / integration testing': 'integration-testing', Git: 'git', 'GitLab CI/CD': 'gitlab',
-    Azure: 'azure', Postman: 'postman', Swagger: 'swagger', 'Swagger / OpenAPI': 'swagger', JavaScript: 'javascript'
+    Azure: 'azure', Postman: 'postman', Swagger: 'swagger', 'Swagger / OpenAPI': 'swagger', JavaScript: 'javascript',
+    HTML: 'html', CSS: 'css', SignalR: 'signalr', 'SQL Server': 'sql-server'
   };
   function createBadge(label) {
     const badge = text('span', label);
