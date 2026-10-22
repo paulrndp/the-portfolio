@@ -2,6 +2,7 @@
 // Public profile links are sourced from the résumé and the owner's original portfolio.
 window.PORTFOLIO = {
   name: "Paul John Jimenez",
+  avatar: "./assests/imgs/avatar.png",
   role: "C# / .NET Software Engineer",
   location: "Pampanga, Philippines",
   intro: "Building reliable APIs and business applications.",
