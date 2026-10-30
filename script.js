@@ -66,8 +66,6 @@
     const entry = document.createElement('article'); entry.className = 'education-entry';
     entry.append(text('p', item.dates, 'experience-dates'), text('h4', item.institution), text('p', item.qualification)); $('#education-list').append(entry);
   });
-  if (profile.email) { const email = text('a', profile.email); email.href = `mailto:${profile.email}`; $('#contact-details').append(email); }
-  if (profile.phone && profile.phoneLink) { const phone = text('a', profile.phone); phone.href = `tel:${profile.phoneLink}`; $('#contact-details').append(phone); }
   const themeColors = { midnight: '#111723', paper: '#f4f1e9', forest: '#13251f' };
   function setTheme(theme) {
     if (!Object.hasOwn(themeColors, theme)) theme = 'midnight';

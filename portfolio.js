@@ -10,8 +10,6 @@ window.PORTFOLIO = {
   about: "I'm a C#/.NET Software Engineer with 4+ years of professional experience in backend and full-stack development. I build and maintain APIs and business applications, focusing on security, performance, and maintainability.",
   aboutExtra: "I enjoy solving technical problems, improving existing systems, and delivering practical software solutions.",
   email: "paulrndp@gmail.com",
-  phone: "+63 947 614 5612",
-  phoneLink: "+639476145612",
   github: "https://github.com/paulrndp",
   linkedin: "https://linkedin.com/in/paul-john-jimenez-064692124/",
   portfolio: "https://paulrndp.github.io/the-portfolio/",
