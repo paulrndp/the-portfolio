@@ -108,8 +108,8 @@ html[data-theme=forest] .contrib-live-dot{background:#5ce08c;box-shadow:0 0 0 0 
 .contrib-svg{display:block;overflow:visible;user-select:none;max-width:none}
 .contrib-month-label{font-family:inherit;font-size:9px;fill:var(--soft);font-weight:500}
 .contrib-day-label{font-family:inherit;font-size:9px;fill:var(--soft);font-weight:500}
-.contrib-day{cursor:pointer;outline:none;transition:transform .12s ease,stroke-width .12s ease}
-.contrib-day:hover,.contrib-day:focus-visible{stroke:var(--ink);stroke-width:1.5px;transform:scale(1.2);transform-origin:center}
+.contrib-day{cursor:pointer;outline:none;transition:stroke .15s ease,stroke-width .15s ease,filter .15s ease}
+.contrib-day:hover,.contrib-day:focus-visible{stroke:var(--ink);stroke-width:1.6px;filter:brightness(1.25)}
 .contrib-day[data-level="0"]{fill:var(--contrib-l0)}
 .contrib-day[data-level="1"]{fill:var(--contrib-l1)}
 .contrib-day[data-level="2"]{fill:var(--contrib-l2)}
@@ -127,7 +127,8 @@ html[data-theme=forest] .contrib-live-dot{background:#5ce08c;box-shadow:0 0 0 0 
 .contrib-legend-box.level-2{background:var(--contrib-l2)}
 .contrib-legend-box.level-3{background:var(--contrib-l3)}
 .contrib-legend-box.level-4{background:var(--contrib-l4)}
-.contrib-tooltip{position:fixed;z-index:9999;pointer-events:none;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 11px;font-size:11px;font-weight:500;line-height:1.4;white-space:nowrap;box-shadow:0 10px 28px rgba(0,0,0,.45);transform:translate(-50%,-100%);margin-top:-8px}
+.contrib-tooltip{position:fixed;z-index:9999;pointer-events:none;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 11px;font-size:11px;font-weight:500;line-height:1.4;white-space:nowrap;box-shadow:0 10px 28px rgba(0,0,0,.45);transform:translate(-50%,-100%);transition:opacity .1s ease;opacity:0;visibility:hidden}
+.contrib-tooltip.is-visible{opacity:1;visibility:visible}
 .contrib-tooltip strong{font-weight:700;color:var(--accent)}
 @media(max-width:760px){
   .identity nav .nav-link:last-child{grid-column:auto}

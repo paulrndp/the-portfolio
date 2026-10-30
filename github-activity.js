@@ -30,6 +30,7 @@
   const FULL_DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
   let activeCell = null;
+  let hideTimeout = null;
 
   function toISODate(d) {
     const year = d.getFullYear();
@@ -62,38 +63,53 @@
     if (!tooltip) return;
     const box = cell.getBoundingClientRect();
     const tooltipRect = tooltip.getBoundingClientRect();
+    const h = tooltipRect.height || 28;
+    const w = tooltipRect.width || 180;
 
     let left = box.left + box.width / 2;
     let top = box.top - 8;
 
-    // Boundary clamping
-    const minLeft = tooltipRect.width / 2 + 10;
-    const maxLeft = window.innerWidth - tooltipRect.width / 2 - 10;
+    // Clamp horizontally to the card / viewport bounds
+    const card = document.querySelector('#github-contrib-card');
+    const cardRight = card ? card.getBoundingClientRect().right : window.innerWidth;
+    const cardLeft = card ? card.getBoundingClientRect().left : 0;
+
+    const minLeft = Math.max(12, cardLeft + 12) + w / 2;
+    const maxLeft = Math.min(window.innerWidth - 12, cardRight - 12) - w / 2;
     left = Math.max(minLeft, Math.min(maxLeft, left));
 
-    if (top - tooltipRect.height < 10) {
-      // Show below if there's no room above
-      top = box.bottom + tooltipRect.height + 8;
+    // If too close to viewport top, flip below the cell
+    if (top - h < 10) {
+      top = box.bottom + h + 8;
     }
 
-    tooltip.style.left = `${left}px`;
-    tooltip.style.top = `${top}px`;
+    tooltip.style.left = `${Math.round(left)}px`;
+    tooltip.style.top = `${Math.round(top)}px`;
   }
 
   function showTooltip(cell) {
     if (!tooltip) return;
+    if (hideTimeout) {
+      clearTimeout(hideTimeout);
+      hideTimeout = null;
+    }
     activeCell = cell;
     const count = parseInt(cell.getAttribute('data-count') || '0', 10);
     const dateStr = cell.getAttribute('data-date') || '';
     tooltip.innerHTML = formatTooltip(count, dateStr);
     tooltip.hidden = false;
     positionTooltip(cell);
+    tooltip.classList.add('is-visible');
   }
 
   function hideTooltip() {
     if (!tooltip) return;
     activeCell = null;
-    tooltip.hidden = true;
+    tooltip.classList.remove('is-visible');
+    if (hideTimeout) clearTimeout(hideTimeout);
+    hideTimeout = setTimeout(() => {
+      if (!activeCell) tooltip.hidden = true;
+    }, 120);
   }
 
   function renderCalendar(contributionsMap, totalCount) {
@@ -188,8 +204,6 @@
           rect.setAttribute('role', 'gridcell');
           rect.setAttribute('aria-label', `${count} ${count === 1 ? 'contribution' : 'contributions'} on ${dateStr}`);
 
-          rect.addEventListener('pointerenter', () => showTooltip(rect));
-          rect.addEventListener('pointerleave', hideTooltip);
           rect.addEventListener('focus', () => showTooltip(rect));
           rect.addEventListener('blur', hideTooltip);
 
@@ -199,6 +213,18 @@
         svg.appendChild(rect);
       }
     }
+
+    // Smooth event delegation on SVG (glitch-free hover across cells)
+    svg.onpointerover = e => {
+      const cell = e.target.closest('.contrib-day');
+      if (!cell || cell.classList.contains('future')) return;
+      if (activeCell === cell) return;
+      showTooltip(cell);
+    };
+
+    svg.onpointerleave = () => {
+      hideTooltip();
+    };
 
     // Render month labels at top, filtering collisions
     for (let i = 0; i < monthHeaders.length; i++) {
