@@ -15,9 +15,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=Manrope:wght@500;600;650;700;750;800&amp;display=swap">
-  <link rel="stylesheet" href="./styles.css?v=20261022-avatar-side-by-side">
+  <link rel="stylesheet" href="./styles.css?v=20261030-contrib">
   <script defer src="./portfolio.js?v=20261013-sql-badge"></script>
   <script defer src="./script.js?v=20261020-skill-logos"></script>
+  <script defer src="./github-activity.js?v=20261030-live"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -42,7 +43,8 @@
           <a class="nav-link" href="#experience"><span class="nav-number">02</span><span class="nav-line"></span>Experience</a>
           <a class="nav-link" href="#professional"><span class="nav-number">03</span><span class="nav-line"></span>Professional projects</a>
           <a class="nav-link" href="#personal"><span class="nav-number">04</span><span class="nav-line"></span>Personal projects</a>
-          <a class="nav-link" href="#contact"><span class="nav-number">05</span><span class="nav-line"></span>Contact</a>
+          <a class="nav-link" href="#activity"><span class="nav-number">05</span><span class="nav-line"></span>Contributions</a>
+          <a class="nav-link" href="#contact"><span class="nav-number">06</span><span class="nav-line"></span>Contact</a>
         </nav>
       </div>
       <div class="identity-bottom"><div class="build-note"><span aria-hidden="true">&lt;/&gt;</span><p>Always learning.<br><strong>Always building.</strong></p><span class="build-spark" aria-hidden="true">✳</span></div><div class="social-links" id="social-links" aria-label="Social profiles"></div></div>
@@ -71,8 +73,47 @@
         <p class="section-intro">Earlier personal builds exploring content, communication, productivity, APIs, and identity.</p>
         <div id="personal-projects" class="project-list"></div>
       </section>
+      <section class="content-section" id="activity" aria-labelledby="activity-title">
+        <div class="section-heading">
+          <h2 class="section-label" id="activity-title"><span>05 /</span> GITHUB CONTRIBUTIONS</h2>
+          <span class="contrib-live-badge"><span class="contrib-live-dot" aria-hidden="true"></span> Live</span>
+        </div>
+        <p class="section-intro">Real-time public contribution activity and commit history from GitHub.</p>
+        <div class="contrib-card" id="github-contrib-card">
+          <div class="contrib-header">
+            <div class="contrib-header-left">
+              <p class="contrib-total"><strong id="contrib-total-count">36</strong> contributions in the last year</p>
+            </div>
+            <div class="contrib-header-right">
+              <a class="contrib-profile-link" href="https://github.com/paulrndp" target="_blank" rel="noopener noreferrer" aria-label="View Paul John Jimenez on GitHub (opens in a new tab)">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 19c-4 1-4-2-6-2m12 5v-4a3.5 3.5 0 0 0-1-3c3-.3 6-1.5 6-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2S17.4 2.5 15 4a11 11 0 0 0-6 0C6.6 2.5 5.4 2.6 5.4 2.6a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9c0 4.5 3 5.7 6 6a3.5 3.5 0 0 0-1 3v4"/></svg>
+                <span>github.com/paulrndp</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+          <div class="contrib-scroll" id="contrib-scroll" tabindex="0" role="region" aria-label="GitHub contribution calendar grid. Use arrow keys to navigate dates.">
+            <svg class="contrib-svg" id="contrib-svg" width="721" height="113" viewBox="0 0 721 113" role="grid" aria-readonly="true">
+              <!-- Rendered dynamically by github-activity.js -->
+            </svg>
+          </div>
+          <div class="contrib-footer">
+            <a class="contrib-help-link" href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-settings-on-your-profile/why-are-my-contributions-not-showing-up-on-my-profile" target="_blank" rel="noopener noreferrer">Learn how we count contributions</a>
+            <div class="contrib-legend" aria-label="Contribution activity legend">
+              <span>Less</span>
+              <span class="contrib-legend-box level-0" title="No contributions" aria-hidden="true"></span>
+              <span class="contrib-legend-box level-1" title="1-2 contributions" aria-hidden="true"></span>
+              <span class="contrib-legend-box level-2" title="3-5 contributions" aria-hidden="true"></span>
+              <span class="contrib-legend-box level-3" title="6-9 contributions" aria-hidden="true"></span>
+              <span class="contrib-legend-box level-4" title="10+ contributions" aria-hidden="true"></span>
+              <span>More</span>
+            </div>
+          </div>
+        </div>
+        <div id="contrib-tooltip" class="contrib-tooltip" role="tooltip" hidden></div>
+      </section>
       <section class="contact content-section" id="contact" aria-labelledby="contact-title">
-        <h2 class="section-label" id="contact-title"><span>05 /</span> WHAT'S NEXT?</h2>
+        <h2 class="section-label" id="contact-title"><span>06 /</span> WHAT'S NEXT?</h2>
         <h3>Let's build something <span class="accent">worth using.</span></h3>
         <p>Have an idea, a question, or a project in mind? There's always room for a good conversation.</p>
         <button class="contact-button" id="contact-action">Get in touch <span aria-hidden="true">↗</span></button>
