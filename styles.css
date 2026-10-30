@@ -84,7 +84,7 @@ footer{font-size:12px}.footer-bottom{font-size:11px}
 @media(max-width:480px){.profile-header{gap:14px;margin-bottom:15px}.profile-avatar-wrap{width:64px;height:64px;border-width:2px;padding:2px}.identity .profile-header h1{font-size:26px}}
 @media(max-width:360px){.profile-header{gap:10px;margin-bottom:12px}.profile-avatar-wrap{width:54px;height:54px}.identity .profile-header h1{font-size:22px}}
 
-/* GitHub Contributions Section */
+/* Activity Calendar Section */
 .contrib-card{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:24px;display:flex;flex-direction:column;gap:18px;position:relative;transition:border-color .2s,background .2s,box-shadow .2s}
 .contrib-card:hover{border-color:color-mix(in srgb,var(--accent) 35%,var(--line));box-shadow:0 8px 30px #00000012}
 .contrib-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
